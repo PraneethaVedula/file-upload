@@ -58,53 +58,7 @@ function uploadFile(name) {
                 uploadedArea.insertAdjacentHTML("afterbegin", uploadedHTML) ;
             }     
     });
-    
-    let formData = new FormData(form); // Corrected case
+
+    let formData = new FormData(form);  
     xhr.send(formData);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// const form = document.querySelector("form"),
-//       fileInput = form.querySelector("input[type='file']"), // Ensure the correct selector for file input
-//       progressArea = document.querySelector('.progress-area'),
-//       uploadedArea = document.querySelector('.uploaded-area');
-
-// form.addEventListener('click', () => {
-//     fileInput.click();
-// });
-
-// fileInput.onChange = ({target})=>{
-//     let file = target.files[0] ;
-//     if(file) {
-//         let fileName = file.name ;
-//         uploadFile(fileName) ;
-//     }
-// }
-
-// function uploadFile(name){
-//     let xhr = new XMLHttpRequest();
-//     xhr.open("POST", "php/upload.php");
-//     xhr.upload.addEventListener("progress", e =>{
-//         console.log(e);
-//     } );
-//     let  formData = new formData(form);
-//     xhr.send(formData) ;
-    
-// }
-
-
